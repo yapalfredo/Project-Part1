@@ -64,6 +64,7 @@ message to that effect.
 		{
 			cout << e.what() << endl;
 		}
+
 	}
 
 	void UnixCommands::loadScreen()

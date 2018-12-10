@@ -1,5 +1,6 @@
 #include "RandomNumberGenerator.h"
 #include "UnixCommands.h"
+#include "MyStats.h"
 
 char choice;
 
@@ -16,19 +17,22 @@ int main()
 
 void menuFunction()
 {
-	RandomNumberGenerator hm1;
-	UnixCommands hm2;
+
 
 	try
 	{
 		do
 		{
+			RandomNumberGenerator hm1;
+			UnixCommands hm2;
+			MyStats hm3;
+
 			cout << "BMCC CSC FALL 2018 HOMEWORK MENU" << endl << endl;
 
 			cout << "Press: " << endl;
 			cout << "		1 - Random Number Generator " << endl;
 			cout << "		2 - Unix Commands" << endl;
-			cout << "		3 - Robot Homework" << endl;
+			cout << "		3 - My Stats" << endl;
 			cout << "		4 - Exit" << endl;
 			cin >> choice;
 			
@@ -43,7 +47,7 @@ void menuFunction()
 					hm2.HMW2Choice();
 					break;
 				case '3':
-
+					hm3.HMW3Choice();
 					//call Homework 3
 					break;
 				case '4':
@@ -54,6 +58,9 @@ void menuFunction()
 					menuFunction();
 					break;
 				}
+				hm1.~RandomNumberGenerator();
+				hm2.~UnixCommands();
+				hm3.~MyStats();
 		} while (choice != '4');
 	}
 	catch (exception& e)

@@ -72,9 +72,6 @@ odd numbers generated and the ratio of even to odd numbers.
 	{
 		try
 		{
-			//do
-			//{
-
 			//declared ofstream object to out to a text file
 			ofstream outFile("random.txt");
 			//initialized two int variables 'odd', 'even' to 0
@@ -118,20 +115,6 @@ odd numbers generated and the ratio of even to odd numbers.
 				inFile.close();             //close inFile object when done
 			}
 			//-------------------------INPUT FILE-----------------------------------------
-
-			cout << endl << "Do you want to try again ? y/n" << endl;
-			cin >> choice;
-			if (tolower(choice) == 'y')
-			{
-			generateRandomNumber();
-			}
-			else if (isdigit(choice) || tolower(choice)!='n' )
-			{
-				cout << "P L E A S E   E N T E R   O N L Y   B E T W E E N   'y'  or  'n' " << endl;
-			}
-			
-
-			//} while (isdigit(choice) || tolower(choice) != 'n');
 		}
 		catch (const string str)
 		{
@@ -142,5 +125,4 @@ odd numbers generated and the ratio of even to odd numbers.
 		{
 			cout << e.what() << endl;
 		}
-
 	}

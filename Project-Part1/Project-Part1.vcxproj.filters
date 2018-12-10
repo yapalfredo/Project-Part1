@@ -26,5 +26,8 @@
     <ClInclude Include="UnixCommands.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyStats.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
