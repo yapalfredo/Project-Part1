@@ -23,5 +23,8 @@
     <ClInclude Include="RandomNumberGenerator.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="UnixCommands.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

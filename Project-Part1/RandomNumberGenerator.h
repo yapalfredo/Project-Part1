@@ -1,17 +1,40 @@
 #pragma once
+
+//HOMEWORK 1
+/* Assignment 1 - 1.) “rand”  test program
+
+Write a program that tests the validity of the rand() function.
+Generate 10,000 random numbers. For each random number, determine if
+it is even (divisible by 2) or odd, counting the total number of
+even and odd numbers. Compute the ratio of even to odd numbers. Print
+to the screen the number of even numbers generated, the number of
+odd numbers generated and the ratio of even to odd numbers.
+
+*/
+
 #ifndef RANDOM_NUMBER_GENERATOR   
-	void HMW1Choice();
-	void generateRandomNumber();	
+#define RANDOM_NUMBER_GENERATOR
 	#include <iostream>
 	#include <time.h>
 	#include <fstream>	
 	#include <string>
 	using namespace std;
-	char choice;
-#define RANDOM_NUMBER_GENERATOR
+	
+
+	class RandomNumberGenerator
+	{
+	private:
+		char choice;
+	public:
+		RandomNumberGenerator() {}
+		~RandomNumberGenerator(){}
+		void HMW1Choice();
+		void generateRandomNumber();
+	};
+
 #endif
 
-	void HMW1Choice()
+	void RandomNumberGenerator::HMW1Choice()
 	{
 		try
 		{
@@ -32,7 +55,7 @@
 					return;
 					break;
 				default:
-					cout << endl << "Please enter only between 1 - 2 " << endl << endl;
+					cout << endl << "P L E A S E   E N T E R   O N L Y   B E T W E E N   1 - 2 " << endl << endl;
 					HMW1Choice();
 					break;
 				}
@@ -45,12 +68,12 @@
 	}
 
 
-	void generateRandomNumber()
+	void RandomNumberGenerator::generateRandomNumber()
 	{
 		try
 		{
-			do
-			{
+			//do
+			//{
 
 			//declared ofstream object to out to a text file
 			ofstream outFile("random.txt");
@@ -98,12 +121,17 @@
 
 			cout << endl << "Do you want to try again ? y/n" << endl;
 			cin >> choice;
-			if (isdigit(choice))
+			if (tolower(choice) == 'y')
 			{
-				cout << "Please enter only 'y' or 'n' " << endl;
+			generateRandomNumber();
 			}
+			else if (isdigit(choice) || tolower(choice)!='n' )
+			{
+				cout << "P L E A S E   E N T E R   O N L Y   B E T W E E N   'y'  or  'n' " << endl;
+			}
+			
 
-			} while (isdigit(choice) || tolower(choice) != 'n');
+			//} while (isdigit(choice) || tolower(choice) != 'n');
 		}
 		catch (const string str)
 		{
