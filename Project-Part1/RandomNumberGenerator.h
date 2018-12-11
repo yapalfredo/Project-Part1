@@ -31,7 +31,6 @@ odd numbers generated and the ratio of even to odd numbers.
 		void HMW1Choice();
 		void generateRandomNumber();
 	};
-
 #endif
 
 	void RandomNumberGenerator::HMW1Choice()

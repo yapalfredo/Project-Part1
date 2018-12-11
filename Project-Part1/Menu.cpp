@@ -8,24 +8,20 @@ void menuFunction();
 
 int main()
 {
-
 	menuFunction();
 	system("pause");
 	return 0;
-
 }
 
 void menuFunction()
 {
-
-
 	try
 	{
 		do
 		{
-			RandomNumberGenerator hm1;
-			UnixCommands hm2;
-			MyStats hm3;
+			RandomNumberGenerator hw1;
+			UnixCommands hw2;
+			MyStats hw3;
 
 			cout << "BMCC CSC FALL 2018 HOMEWORK MENU" << endl << endl;
 
@@ -40,14 +36,14 @@ void menuFunction()
 				{
 				case '1':
 					//call Homework 1
-					hm1.HMW1Choice();
+					hw1.HMW1Choice();
 					break;
 				case '2':
 					//call Homework 2
-					hm2.HMW2Choice();
+					hw2.HMW2Choice();
 					break;
 				case '3':
-					hm3.HMW3Choice();
+					hw3.HMW3Choice();
 					//call Homework 3
 					break;
 				case '4':
@@ -58,9 +54,9 @@ void menuFunction()
 					menuFunction();
 					break;
 				}
-				hm1.~RandomNumberGenerator();
-				hm2.~UnixCommands();
-				hm3.~MyStats();
+				hw1.~RandomNumberGenerator();
+				hw2.~UnixCommands();
+				hw3.~MyStats();
 		} while (choice != '4');
 	}
 	catch (exception& e)

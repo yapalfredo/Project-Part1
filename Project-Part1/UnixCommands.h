@@ -30,7 +30,6 @@ message to that effect.
 		void loadScreen();
 		void unixCommands(string);
 	};
-
 #endif
 	
 	void UnixCommands::HMW2Choice()
