@@ -116,6 +116,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MyStats.cpp" />
+    <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="UnixCommands.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyStats.h" />
